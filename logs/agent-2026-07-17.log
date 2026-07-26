@@ -1,0 +1,1007 @@
+[2026-07-17T00:00:00.635Z] [CRON] Starting management cycle
+[2026-07-17T00:00:00.656Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:00:01.502Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:00:01.671Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T00:00:01.682Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T00:00:01.763Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T00:00:01.764Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T00:10:00.951Z] [CRON] Starting management cycle
+[2026-07-17T00:10:01.725Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:10:01.991Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T00:10:01.993Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:10:03.006Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T00:10:03.008Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T00:20:00.215Z] [CRON] Starting management cycle
+[2026-07-17T00:20:01.036Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:20:01.234Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #421)
+[2026-07-17T00:20:01.236Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T00:20:01.237Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:20:02.170Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T00:20:02.171Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T00:30:00.462Z] [CRON] Starting management cycle
+[2026-07-17T00:30:00.480Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:30:01.363Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:30:01.474Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T00:30:01.475Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T00:30:01.511Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T00:30:01.512Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T00:40:00.756Z] [CRON] Starting management cycle
+[2026-07-17T00:40:01.553Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:40:01.754Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T00:40:01.760Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:40:02.726Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T00:40:02.727Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T00:45:54.183Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #441)
+[2026-07-17T00:50:00.172Z] [CRON] Starting management cycle
+[2026-07-17T00:50:01.012Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:50:01.227Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T00:50:01.228Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T00:50:02.267Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T00:50:02.268Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:00:00.489Z] [CRON] Starting management cycle
+[2026-07-17T01:00:00.503Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:00:00.868Z] [CRON] Starting morning briefing
+[2026-07-17T01:00:01.427Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:00:01.559Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T01:00:01.561Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T01:00:01.689Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T01:00:01.691Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:08:24.197Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #461)
+[2026-07-17T01:08:35.819Z] [TELEGRAM_ERROR] Poll error: fetch failed
+[2026-07-17T01:10:00.771Z] [CRON] Starting management cycle
+[2026-07-17T01:10:01.580Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:10:01.998Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T01:10:01.999Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:10:02.969Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T01:10:02.971Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:20:00.173Z] [CRON] Starting management cycle
+[2026-07-17T01:20:00.974Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:20:01.222Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T01:20:01.224Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:20:02.269Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T01:20:02.271Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:30:00.438Z] [CRON] Starting management cycle
+[2026-07-17T01:30:00.461Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:30:00.727Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #481)
+[2026-07-17T01:30:01.330Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:30:01.538Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T01:30:01.539Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T01:30:01.561Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T01:30:01.562Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:40:00.727Z] [CRON] Starting management cycle
+[2026-07-17T01:40:01.529Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:40:01.759Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T01:40:01.760Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:40:02.720Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T01:40:02.722Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:50:00.980Z] [CRON] Starting management cycle
+[2026-07-17T01:50:01.768Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:50:01.984Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T01:50:01.985Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T01:50:02.967Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T01:50:02.974Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T01:55:39.240Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #501)
+[2026-07-17T02:00:00.361Z] [CRON] Starting management cycle
+[2026-07-17T02:00:00.383Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:00:01.266Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:00:01.444Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T02:00:01.446Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T02:00:01.450Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T02:00:01.451Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T02:10:00.611Z] [CRON] Starting management cycle
+[2026-07-17T02:10:01.427Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:10:01.589Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T02:10:01.590Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:10:02.518Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T02:10:02.519Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T02:17:24.231Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #521)
+[2026-07-17T02:20:00.925Z] [CRON] Starting management cycle
+[2026-07-17T02:20:01.762Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:20:02.023Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T02:20:02.025Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:20:02.988Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T02:20:02.990Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T02:30:00.235Z] [CRON] Starting management cycle
+[2026-07-17T02:30:00.251Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:30:01.173Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:30:01.305Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T02:30:01.307Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T02:30:01.383Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T02:30:01.384Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T02:39:54.228Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #541)
+[2026-07-17T02:40:00.503Z] [CRON] Starting management cycle
+[2026-07-17T02:40:01.327Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:40:01.544Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T02:40:01.557Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:40:02.181Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T02:40:02.183Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T02:50:00.754Z] [CRON] Starting management cycle
+[2026-07-17T02:50:01.597Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:50:01.894Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T02:50:01.895Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T02:50:02.840Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T02:50:02.847Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T03:00:00.053Z] [CRON] Starting management cycle
+[2026-07-17T03:00:00.071Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:00:00.925Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:00:01.072Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T03:00:01.074Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T03:00:01.128Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T03:00:01.128Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T03:05:24.352Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #561)
+[2026-07-17T03:10:00.369Z] [CRON] Starting management cycle
+[2026-07-17T03:10:01.172Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:10:01.390Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T03:10:01.391Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:10:02.431Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T03:10:02.432Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T03:20:00.679Z] [CRON] Starting management cycle
+[2026-07-17T03:20:01.517Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:20:01.732Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T03:20:01.733Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:20:02.689Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T03:20:02.691Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T03:27:09.283Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #581)
+[2026-07-17T03:30:00.014Z] [CRON] Starting management cycle
+[2026-07-17T03:30:00.034Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:30:00.906Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:30:01.077Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T03:30:01.079Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T03:30:01.118Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T03:30:01.119Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T03:40:00.396Z] [CRON] Starting management cycle
+[2026-07-17T03:40:01.174Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:40:01.375Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T03:40:01.376Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:40:02.348Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T03:40:02.349Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T03:48:54.279Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #601)
+[2026-07-17T03:50:00.749Z] [CRON] Starting management cycle
+[2026-07-17T03:50:01.579Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:50:01.827Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T03:50:01.829Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T03:50:02.827Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T03:50:02.828Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:00:00.172Z] [CRON] Starting management cycle
+[2026-07-17T04:00:00.187Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:00:01.055Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:00:01.191Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T04:00:01.192Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T04:00:01.219Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T04:00:01.220Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:10:00.507Z] [CRON] Starting management cycle
+[2026-07-17T04:10:01.324Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:10:01.602Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T04:10:01.603Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:10:01.777Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #621)
+[2026-07-17T04:10:02.625Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T04:10:02.628Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:20:00.840Z] [CRON] Starting management cycle
+[2026-07-17T04:20:01.648Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:20:01.908Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T04:20:01.910Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:20:02.515Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T04:20:02.517Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:30:00.297Z] [CRON] Starting management cycle
+[2026-07-17T04:30:00.312Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:30:01.177Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:30:01.356Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T04:30:01.358Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T04:30:01.380Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T04:30:01.381Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:36:54.316Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #641)
+[2026-07-17T04:40:00.654Z] [CRON] Starting management cycle
+[2026-07-17T04:40:01.496Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:40:01.742Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T04:40:01.744Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:40:02.729Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T04:40:02.731Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:50:00.970Z] [CRON] Starting management cycle
+[2026-07-17T04:50:01.798Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:50:02.096Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T04:50:02.097Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T04:50:03.110Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T04:50:03.112Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T04:58:39.338Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #661)
+[2026-07-17T05:00:00.311Z] [CRON] Starting management cycle
+[2026-07-17T05:00:00.338Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:00:01.283Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:00:01.443Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T05:00:01.445Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T05:00:01.473Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T05:00:01.474Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T05:10:00.705Z] [CRON] Starting management cycle
+[2026-07-17T05:10:01.547Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:10:01.810Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T05:10:01.811Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:10:02.408Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T05:10:02.409Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T05:20:00.016Z] [CRON] Starting management cycle
+[2026-07-17T05:20:00.901Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:20:01.107Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #681)
+[2026-07-17T05:20:01.110Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T05:20:01.111Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:20:02.061Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T05:20:02.063Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T05:30:00.359Z] [CRON] Starting management cycle
+[2026-07-17T05:30:00.371Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:30:01.230Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:30:01.358Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T05:30:01.360Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T05:30:01.400Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T05:30:01.402Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T05:40:00.700Z] [CRON] Starting management cycle
+[2026-07-17T05:40:01.520Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:40:01.744Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T05:40:01.746Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:40:02.732Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T05:40:02.733Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T05:45:54.353Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #701)
+[2026-07-17T05:50:00.994Z] [CRON] Starting management cycle
+[2026-07-17T05:50:01.797Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:50:02.068Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T05:50:02.069Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T05:50:03.072Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T05:50:03.074Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:00:00.368Z] [CRON] Starting management cycle
+[2026-07-17T06:00:00.383Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:00:01.249Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:00:01.465Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T06:00:01.466Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:00:01.475Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T06:00:01.476Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T06:08:24.365Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #721)
+[2026-07-17T06:10:00.695Z] [CRON] Starting management cycle
+[2026-07-17T06:10:01.500Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:10:02.006Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T06:10:02.007Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:10:03.090Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T06:10:03.092Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:20:00.020Z] [CRON] Starting management cycle
+[2026-07-17T06:20:00.810Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:20:01.012Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T06:20:01.017Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:20:02.061Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T06:20:02.063Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:30:00.402Z] [CRON] Starting management cycle
+[2026-07-17T06:30:00.414Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:30:00.614Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #741)
+[2026-07-17T06:30:01.251Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:30:01.443Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T06:30:01.445Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:30:01.453Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T06:30:01.453Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T06:40:00.736Z] [CRON] Starting management cycle
+[2026-07-17T06:40:01.533Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:40:01.841Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T06:40:01.843Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:40:02.880Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T06:40:02.885Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:50:00.069Z] [CRON] Starting management cycle
+[2026-07-17T06:50:00.902Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:50:01.111Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T06:50:01.112Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T06:50:02.096Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T06:50:02.097Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T06:55:39.401Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #761)
+[2026-07-17T07:00:00.400Z] [CRON] Starting management cycle
+[2026-07-17T07:00:00.412Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:00:01.262Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:00:01.452Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T07:00:01.453Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T07:00:01.475Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T07:00:01.476Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T07:10:00.717Z] [CRON] Starting management cycle
+[2026-07-17T07:10:01.571Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:10:01.769Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T07:10:01.770Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:10:02.712Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T07:10:02.714Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T07:10:25.824Z] [TELEGRAM_ERROR] Poll error: fetch failed
+[2026-07-17T07:12:13.256Z] [TELEGRAM_ERROR] Poll error: fetch failed
+[2026-07-17T07:17:24.396Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #781)
+[2026-07-17T07:20:00.066Z] [CRON] Starting management cycle
+[2026-07-17T07:20:00.887Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:20:01.274Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T07:20:01.275Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:20:02.269Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T07:20:02.271Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T07:30:00.409Z] [CRON] Starting management cycle
+[2026-07-17T07:30:00.428Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:30:01.386Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:30:01.535Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T07:30:01.536Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T07:30:01.565Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T07:30:01.566Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T07:39:54.369Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #801)
+[2026-07-17T07:40:00.790Z] [CRON] Starting management cycle
+[2026-07-17T07:40:01.649Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:40:01.898Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T07:40:01.900Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:40:02.932Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T07:40:02.934Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T07:50:00.121Z] [CRON] Starting management cycle
+[2026-07-17T07:50:00.940Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:50:01.158Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T07:50:01.165Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T07:50:02.236Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T07:50:02.238Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T08:00:00.454Z] [CRON] Starting management cycle
+[2026-07-17T08:00:00.466Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:00:01.287Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:00:01.472Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T08:00:01.474Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T08:00:01.586Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T08:00:01.587Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T08:05:24.447Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #821)
+[2026-07-17T08:10:00.799Z] [CRON] Starting management cycle
+[2026-07-17T08:10:01.594Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:10:01.863Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T08:10:01.864Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:10:02.937Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T08:10:02.942Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T08:20:00.134Z] [CRON] Starting management cycle
+[2026-07-17T08:20:00.938Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:20:01.227Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T08:20:01.229Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:20:02.082Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T08:20:02.084Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T08:27:09.404Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #841)
+[2026-07-17T08:30:00.459Z] [CRON] Starting management cycle
+[2026-07-17T08:30:00.471Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:30:01.467Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:30:01.622Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T08:30:01.624Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T08:30:01.635Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T08:30:01.636Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T08:40:00.831Z] [CRON] Starting management cycle
+[2026-07-17T08:40:01.779Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:40:01.974Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T08:40:01.976Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:40:02.986Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T08:40:02.987Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T08:48:54.389Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #861)
+[2026-07-17T08:50:00.165Z] [CRON] Starting management cycle
+[2026-07-17T08:50:00.960Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:50:01.177Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T08:50:01.190Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T08:50:02.195Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T08:50:02.197Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:00:00.475Z] [CRON] Starting management cycle
+[2026-07-17T09:00:00.486Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:00:01.333Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:00:01.466Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T09:00:01.468Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T09:00:01.530Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T09:00:01.532Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:10:00.811Z] [CRON] Starting management cycle
+[2026-07-17T09:10:01.649Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:10:01.844Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T09:10:01.845Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:10:02.061Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #881)
+[2026-07-17T09:10:02.831Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T09:10:02.837Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:20:00.153Z] [CRON] Starting management cycle
+[2026-07-17T09:20:00.950Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:20:01.194Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T09:20:01.195Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:20:02.222Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T09:20:02.224Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:30:00.486Z] [CRON] Starting management cycle
+[2026-07-17T09:30:00.503Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:30:00.852Z] [TELEGRAM_ERROR] sendChatAction failed: fetch failed
+[2026-07-17T09:30:01.336Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:30:01.588Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T09:30:01.589Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T09:30:01.613Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T09:30:01.614Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:36:54.472Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #901)
+[2026-07-17T09:40:00.823Z] [CRON] Starting management cycle
+[2026-07-17T09:40:01.616Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:40:01.855Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T09:40:01.856Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:40:02.853Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T09:40:02.858Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:50:00.148Z] [CRON] Starting management cycle
+[2026-07-17T09:50:00.935Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:50:01.139Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T09:50:01.141Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T09:50:02.133Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T09:50:02.134Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T09:58:39.473Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #921)
+[2026-07-17T10:00:00.574Z] [CRON] Starting management cycle
+[2026-07-17T10:00:00.594Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:00:01.426Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:00:01.602Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T10:00:01.603Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T10:00:01.750Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T10:00:01.751Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T10:10:00.929Z] [CRON] Starting management cycle
+[2026-07-17T10:10:01.712Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:10:01.946Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T10:10:01.947Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:10:03.018Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T10:10:03.019Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T10:20:00.370Z] [CRON] Starting management cycle
+[2026-07-17T10:20:01.212Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:20:01.465Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #941)
+[2026-07-17T10:20:01.466Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T10:20:01.467Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:20:02.466Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T10:20:02.467Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T10:30:00.697Z] [CRON] Starting management cycle
+[2026-07-17T10:30:00.710Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:30:01.585Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:30:01.718Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T10:30:01.719Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T10:30:01.741Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T10:30:01.742Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T10:40:00.029Z] [CRON] Starting management cycle
+[2026-07-17T10:40:00.846Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:40:01.103Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T10:40:01.110Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:40:02.160Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T10:40:02.170Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T10:45:54.546Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #961)
+[2026-07-17T10:50:00.441Z] [CRON] Starting management cycle
+[2026-07-17T10:50:01.263Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:50:01.488Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T10:50:01.490Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T10:50:02.475Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T10:50:02.479Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T11:00:00.820Z] [CRON] Starting management cycle
+[2026-07-17T11:00:00.837Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:00:00.991Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T11:00:01.701Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:00:01.884Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T11:00:01.898Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0 SOL)
+[2026-07-17T11:00:01.949Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T11:00:01.950Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T11:08:24.508Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #981)
+[2026-07-17T11:10:00.199Z] [CRON] Starting management cycle
+[2026-07-17T11:10:01.003Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:10:01.204Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T11:10:01.207Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:10:02.253Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T11:10:02.255Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T11:20:00.586Z] [CRON] Starting management cycle
+[2026-07-17T11:20:01.435Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:20:01.682Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T11:20:01.684Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:20:02.786Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T11:20:02.787Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T11:30:00.908Z] [CRON] Starting management cycle
+[2026-07-17T11:30:00.920Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:30:01.151Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1001)
+[2026-07-17T11:30:01.812Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:30:01.965Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T11:30:01.983Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T11:30:02.121Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T11:30:02.123Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T11:36:04.900Z] [TELEGRAM_ERROR] Poll error: fetch failed
+[2026-07-17T11:40:00.258Z] [CRON] Starting management cycle
+[2026-07-17T11:40:01.067Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:40:01.352Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T11:40:01.353Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:40:02.327Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T11:40:02.328Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T11:50:00.677Z] [CRON] Starting management cycle
+[2026-07-17T11:50:01.510Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:50:01.741Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T11:50:01.743Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T11:50:02.712Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T11:50:02.714Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T11:55:39.520Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1021)
+[2026-07-17T12:00:00.999Z] [CRON] Starting management cycle
+[2026-07-17T12:00:01.815Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:00:02.048Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T12:00:02.049Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:00:02.232Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T12:00:03.104Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T12:00:03.105Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0 SOL)
+[2026-07-17T12:10:00.412Z] [CRON] Starting management cycle
+[2026-07-17T12:10:01.213Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:10:01.437Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T12:10:01.439Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:10:02.434Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T12:10:02.435Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T12:17:24.533Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1041)
+[2026-07-17T12:20:00.726Z] [CRON] Starting management cycle
+[2026-07-17T12:20:01.541Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:20:01.801Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T12:20:01.803Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:20:02.797Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T12:20:02.799Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T12:30:00.069Z] [CRON] Starting management cycle
+[2026-07-17T12:30:00.082Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:30:00.941Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:30:01.077Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T12:30:01.078Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T12:30:01.216Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T12:30:01.217Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T12:39:54.519Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1061)
+[2026-07-17T12:40:00.485Z] [CRON] Starting management cycle
+[2026-07-17T12:40:01.306Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:40:01.490Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T12:40:01.491Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:40:02.481Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T12:40:02.482Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T12:50:00.816Z] [CRON] Starting management cycle
+[2026-07-17T12:50:01.654Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:50:01.884Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T12:50:01.894Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T12:50:03.016Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T12:50:03.018Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T13:00:00.147Z] [CRON] Starting management cycle
+[2026-07-17T13:00:00.161Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:00:01.059Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:00:01.127Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T13:00:01.128Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T13:00:01.188Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T13:00:01.188Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T13:05:24.551Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1081)
+[2026-07-17T13:10:00.553Z] [CRON] Starting management cycle
+[2026-07-17T13:10:01.378Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:10:01.576Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T13:10:01.578Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:10:02.620Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T13:10:02.622Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T13:20:00.902Z] [CRON] Starting management cycle
+[2026-07-17T13:20:01.720Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:20:01.925Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T13:20:01.926Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:20:02.919Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T13:20:02.920Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T13:27:09.544Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1101)
+[2026-07-17T13:30:00.235Z] [CRON] Starting management cycle
+[2026-07-17T13:30:00.245Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:30:01.104Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:30:01.301Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T13:30:01.302Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T13:30:01.341Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T13:30:01.342Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T13:40:00.602Z] [CRON] Starting management cycle
+[2026-07-17T13:40:01.440Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:40:01.668Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T13:40:01.685Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:40:02.754Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T13:40:02.756Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T13:48:54.614Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1121)
+[2026-07-17T13:50:00.943Z] [CRON] Starting management cycle
+[2026-07-17T13:50:01.784Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:50:02.051Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T13:50:02.052Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T13:50:03.021Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T13:50:03.022Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:00:00.268Z] [CRON] Starting management cycle
+[2026-07-17T14:00:00.285Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:00:01.177Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:00:01.305Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T14:00:01.306Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T14:00:01.405Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T14:00:01.406Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:10:00.647Z] [CRON] Starting management cycle
+[2026-07-17T14:10:01.491Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:10:01.692Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T14:10:01.694Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:10:01.835Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1141)
+[2026-07-17T14:10:02.645Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T14:10:02.646Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:20:00.934Z] [CRON] Starting management cycle
+[2026-07-17T14:20:01.766Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:20:01.996Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T14:20:02.001Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:20:03.007Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T14:20:03.008Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:30:00.263Z] [CRON] Starting management cycle
+[2026-07-17T14:30:00.275Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:30:01.121Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:30:01.307Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T14:30:01.309Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T14:30:01.390Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T14:30:01.391Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:36:54.585Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1161)
+[2026-07-17T14:40:00.627Z] [CRON] Starting management cycle
+[2026-07-17T14:40:01.460Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:40:01.656Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T14:40:01.658Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:40:02.639Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T14:40:02.641Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:50:00.965Z] [CRON] Starting management cycle
+[2026-07-17T14:50:01.787Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:50:02.081Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T14:50:02.083Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T14:50:03.198Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T14:50:03.200Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T14:58:39.575Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1181)
+[2026-07-17T15:00:00.297Z] [CRON] Starting management cycle
+[2026-07-17T15:00:00.312Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:00:01.228Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:00:01.407Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T15:00:01.409Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T15:00:01.559Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T15:00:01.560Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T15:10:00.636Z] [CRON] Starting management cycle
+[2026-07-17T15:10:01.480Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:10:01.677Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T15:10:01.679Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:10:02.663Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T15:10:02.664Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T15:20:00.973Z] [CRON] Starting management cycle
+[2026-07-17T15:20:01.824Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:20:02.119Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1201)
+[2026-07-17T15:20:02.121Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T15:20:02.122Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:20:03.116Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T15:20:03.117Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T15:30:00.322Z] [CRON] Starting management cycle
+[2026-07-17T15:30:00.351Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:30:01.218Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:30:01.379Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T15:30:01.380Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T15:30:01.406Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T15:30:01.407Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T15:40:00.657Z] [CRON] Starting management cycle
+[2026-07-17T15:40:01.456Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:40:01.659Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T15:40:01.660Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:40:02.632Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T15:40:02.634Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T15:45:54.649Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1221)
+[2026-07-17T15:50:00.003Z] [CRON] Starting management cycle
+[2026-07-17T15:50:00.799Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:50:00.993Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T15:50:00.994Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T15:50:02.023Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T15:50:02.029Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:00:00.390Z] [CRON] Starting management cycle
+[2026-07-17T16:00:00.401Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:00:01.244Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:00:01.481Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T16:00:01.483Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T16:00:01.486Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T16:00:01.487Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:08:24.623Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1241)
+[2026-07-17T16:10:00.730Z] [CRON] Starting management cycle
+[2026-07-17T16:10:01.524Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:10:01.800Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T16:10:01.801Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:10:02.804Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T16:10:02.805Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:20:00.036Z] [CRON] Starting management cycle
+[2026-07-17T16:20:00.900Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:20:01.111Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T16:20:01.113Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:20:02.102Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T16:20:02.104Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:30:00.367Z] [CRON] Starting management cycle
+[2026-07-17T16:30:00.383Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:30:00.656Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1261)
+[2026-07-17T16:30:00.724Z] [TELEGRAM_ERROR] sendMessage failed: fetch failed
+[2026-07-17T16:30:00.726Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:30:00.897Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T16:30:00.898Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T16:30:01.542Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T16:30:01.544Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:40:00.713Z] [CRON] Starting management cycle
+[2026-07-17T16:40:01.557Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:40:01.812Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T16:40:01.813Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:40:02.819Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T16:40:02.820Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:50:00.044Z] [CRON] Starting management cycle
+[2026-07-17T16:50:00.845Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:50:01.049Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T16:50:01.051Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T16:50:02.036Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T16:50:02.042Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T16:55:39.738Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1281)
+[2026-07-17T17:00:00.372Z] [CRON] Starting management cycle
+[2026-07-17T17:00:00.386Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:00:01.274Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:00:01.425Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T17:00:01.427Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T17:00:01.449Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T17:00:01.450Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T17:10:00.700Z] [CRON] Starting management cycle
+[2026-07-17T17:10:01.616Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:10:01.820Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T17:10:01.821Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:10:02.765Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T17:10:02.766Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T17:15:34.229Z] [TELEGRAM_ERROR] Poll error: fetch failed
+[2026-07-17T17:17:24.641Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1301)
+[2026-07-17T17:20:00.026Z] [CRON] Starting management cycle
+[2026-07-17T17:20:00.829Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:20:01.043Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T17:20:01.044Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:20:01.999Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T17:20:02.001Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T17:24:50.509Z] [TELEGRAM_ERROR] Poll error: fetch failed
+[2026-07-17T17:30:00.358Z] [CRON] Starting management cycle
+[2026-07-17T17:30:00.375Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:30:01.315Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:30:01.477Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T17:30:01.478Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T17:30:01.525Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T17:30:01.526Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T17:39:54.689Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1321)
+[2026-07-17T17:40:00.699Z] [CRON] Starting management cycle
+[2026-07-17T17:40:01.498Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:40:01.746Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T17:40:01.749Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:40:02.776Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T17:40:02.778Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T17:50:00.048Z] [CRON] Starting management cycle
+[2026-07-17T17:50:00.845Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:50:01.071Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T17:50:01.075Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T17:50:02.074Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T17:50:02.075Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T18:00:00.424Z] [CRON] Starting management cycle
+[2026-07-17T18:00:00.436Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:00:01.305Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:00:01.490Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T18:00:01.492Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T18:00:01.510Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T18:00:01.512Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T18:05:24.796Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1341)
+[2026-07-17T18:10:00.773Z] [CRON] Starting management cycle
+[2026-07-17T18:10:01.557Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:10:01.761Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T18:10:01.763Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:10:02.836Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T18:10:02.842Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T18:20:00.165Z] [CRON] Starting management cycle
+[2026-07-17T18:20:01.020Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:20:01.264Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T18:20:01.267Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:20:02.216Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T18:20:02.218Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T18:27:09.675Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1361)
+[2026-07-17T18:30:00.566Z] [CRON] Starting management cycle
+[2026-07-17T18:30:00.579Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:30:01.428Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:30:01.611Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T18:30:01.612Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T18:30:01.616Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T18:30:01.617Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T18:40:00.904Z] [CRON] Starting management cycle
+[2026-07-17T18:40:01.712Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:40:01.922Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T18:40:01.923Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:40:02.890Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T18:40:02.891Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T18:48:54.713Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1381)
+[2026-07-17T18:50:00.218Z] [CRON] Starting management cycle
+[2026-07-17T18:50:01.013Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:50:01.252Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T18:50:01.253Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T18:50:02.314Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T18:50:02.316Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:00:00.616Z] [CRON] Starting management cycle
+[2026-07-17T19:00:00.642Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:00:01.555Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:00:01.735Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:00:01.737Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:00:01.756Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T19:00:01.757Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T19:10:00.011Z] [CRON] Starting management cycle
+[2026-07-17T19:10:00.775Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:10:00.958Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T19:10:00.964Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:10:01.093Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1401)
+[2026-07-17T19:10:01.947Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:10:01.948Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:20:00.331Z] [CRON] Starting management cycle
+[2026-07-17T19:20:01.143Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:20:01.352Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T19:20:01.353Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:20:02.298Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:20:02.300Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:30:00.739Z] [CRON] Starting management cycle
+[2026-07-17T19:30:00.751Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:30:01.659Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:30:01.765Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:30:01.768Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:30:02.099Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T19:30:02.100Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:30:02.722Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:30:02.725Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:36:09.699Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1421)
+[2026-07-17T19:40:00.053Z] [CRON] Starting management cycle
+[2026-07-17T19:40:00.883Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:40:01.088Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T19:40:01.090Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:40:02.062Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:40:02.063Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:50:00.371Z] [CRON] Starting management cycle
+[2026-07-17T19:50:01.162Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:50:01.386Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T19:50:01.387Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T19:50:02.332Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T19:50:02.333Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T19:57:54.762Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1441)
+[2026-07-17T20:00:00.733Z] [CRON] Starting management cycle
+[2026-07-17T20:00:00.750Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:00:00.946Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T20:00:01.647Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:00:01.787Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T20:00:01.789Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T20:00:01.804Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T20:00:01.805Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0 SOL)
+[2026-07-17T20:10:00.083Z] [CRON] Starting management cycle
+[2026-07-17T20:10:00.894Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:10:01.131Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T20:10:01.132Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:10:02.094Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T20:10:02.095Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T20:19:39.683Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1461)
+[2026-07-17T20:20:00.435Z] [CRON] Starting management cycle
+[2026-07-17T20:20:01.254Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:20:01.504Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T20:20:01.506Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:20:02.466Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T20:20:02.467Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T20:30:00.760Z] [CRON] Starting management cycle
+[2026-07-17T20:30:00.774Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:30:01.650Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:30:01.824Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T20:30:01.826Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T20:30:01.836Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T20:30:01.841Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T20:40:00.144Z] [CRON] Starting management cycle
+[2026-07-17T20:40:00.925Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:40:01.107Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T20:40:01.108Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:40:02.133Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T20:40:02.135Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T20:45:09.715Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1481)
+[2026-07-17T20:50:00.588Z] [CRON] Starting management cycle
+[2026-07-17T20:50:01.373Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:50:01.568Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T20:50:01.569Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T20:50:02.506Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T20:50:02.507Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T21:00:00.976Z] [CRON] Starting management cycle
+[2026-07-17T21:00:00.991Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:00:01.177Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T21:00:01.865Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:00:02.031Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T21:00:02.032Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T21:00:02.103Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T21:00:02.104Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0 SOL)
+[2026-07-17T21:07:39.716Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1501)
+[2026-07-17T21:10:00.336Z] [CRON] Starting management cycle
+[2026-07-17T21:10:01.159Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:10:01.386Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T21:10:01.390Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:10:02.375Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T21:10:02.376Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T21:20:00.716Z] [CRON] Starting management cycle
+[2026-07-17T21:20:01.594Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:20:01.798Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T21:20:01.799Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:20:02.794Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T21:20:02.796Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T21:29:24.778Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1521)
+[2026-07-17T21:30:00.036Z] [CRON] Starting management cycle
+[2026-07-17T21:30:00.052Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:30:00.990Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:30:01.195Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T21:30:01.201Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T21:30:01.205Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T21:30:01.206Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T21:40:00.381Z] [CRON] Starting management cycle
+[2026-07-17T21:40:01.212Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:40:01.513Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T21:40:01.515Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:40:02.508Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T21:40:02.509Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T21:50:00.737Z] [CRON] Starting management cycle
+[2026-07-17T21:50:01.534Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:50:01.759Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T21:50:01.761Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T21:50:01.951Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1541)
+[2026-07-17T21:50:02.731Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T21:50:02.732Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T22:00:00.071Z] [CRON] Starting management cycle
+[2026-07-17T22:00:00.091Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:00:00.934Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:00:01.119Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T22:00:01.120Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T22:00:01.188Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T22:00:01.189Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T22:10:00.414Z] [CRON] Starting management cycle
+[2026-07-17T22:10:01.238Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:10:01.453Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T22:10:01.454Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:10:02.475Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T22:10:02.477Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T22:16:39.823Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1561)
+[2026-07-17T22:20:00.786Z] [CRON] Starting management cycle
+[2026-07-17T22:20:01.578Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:20:01.827Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T22:20:01.828Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:20:02.363Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T22:20:02.365Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T22:30:00.101Z] [CRON] Starting management cycle
+[2026-07-17T22:30:00.116Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:30:00.969Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:30:01.104Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T22:30:01.106Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T22:30:01.174Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T22:30:01.175Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T22:39:09.792Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1581)
+[2026-07-17T22:40:00.453Z] [CRON] Starting management cycle
+[2026-07-17T22:40:01.305Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:40:01.556Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T22:40:01.557Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:40:02.530Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T22:40:02.531Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T22:50:00.857Z] [CRON] Starting management cycle
+[2026-07-17T22:50:01.699Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:50:01.904Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T22:50:01.905Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T22:50:02.850Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T22:50:02.855Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T23:00:00.202Z] [CRON] Starting management cycle
+[2026-07-17T23:00:00.214Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:00:01.083Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:00:01.257Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1601)
+[2026-07-17T23:00:01.263Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T23:00:01.264Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T23:00:01.295Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T23:00:01.296Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T23:10:00.626Z] [CRON] Starting management cycle
+[2026-07-17T23:10:01.441Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:10:01.684Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T23:10:01.687Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:10:02.244Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T23:10:02.245Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T23:20:00.853Z] [CRON] Starting management cycle
+[2026-07-17T23:20:02.302Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:20:02.516Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T23:20:02.517Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:20:03.463Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T23:20:03.464Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T23:26:24.763Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1621)
+[2026-07-17T23:30:00.192Z] [CRON] Starting management cycle
+[2026-07-17T23:30:00.205Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:30:01.071Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:30:01.215Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T23:30:01.225Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0.668755 SOL)
+[2026-07-17T23:30:01.261Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T23:30:01.267Z] [CRON] Screening skipped — previous cycle still running
+[2026-07-17T23:35:25.014Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:36:10.049Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:36:54.681Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:37:39.710Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:38:24.653Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:39:09.692Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:39:54.712Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:40:00.643Z] [CRON] Starting management cycle
+[2026-07-17T23:40:01.472Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:40:01.760Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T23:40:01.761Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:40:02.113Z] [WALLET_ERROR] Helius API error: 523 <none>
+[2026-07-17T23:40:02.895Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T23:40:02.896Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0 SOL)
+[2026-07-17T23:45:09.852Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:45:54.827Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:46:39.819Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:47:24.858Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:48:09.768Z] [PNL_TICK] poller alive — 0 position(s) tracked (tick #1641)
+[2026-07-17T23:48:09.826Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:48:54.825Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:49:39.881Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:50:00.982Z] [CRON] Starting management cycle
+[2026-07-17T23:50:01.776Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:50:02.116Z] [CRON] No open positions — triggering screening cycle
+[2026-07-17T23:50:02.117Z] [POSITIONS] Computing PnL from RPC (https://pump.helius-rpc.com)...
+[2026-07-17T23:50:02.387Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:50:03.194Z] [CRON] Starting screening cycle [model: gemini/gemini-3.1-flash-lite-preview]
+[2026-07-17T23:50:03.196Z] [CRON] Computed deploy amount: 0.5 SOL (wallet: 0 SOL)
+[2026-07-17T23:55:39.838Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:56:24.814Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
+[2026-07-17T23:57:09.826Z] [WALLET_ERROR] Helius API error: 502 Bad Gateway
