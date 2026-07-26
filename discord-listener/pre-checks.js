@@ -86,6 +86,58 @@ export async function resolvePool(address) {
   }
 }
 
+// Stage 3.5: Local authority & LP check via RPC
+import { Connection, PublicKey } from "@solana/web3.js";
+export async function localAuthorityCheck(mint, poolAddress) {
+  if (!mint) return { pass: true };
+  try {
+    const conn = new Connection(process.env.SOLANA_RPC_URL || "https://api.mainnet-beta.solana.com");
+    const mintPubkey = new PublicKey(mint);
+    const mintInfo = await conn.getAccountInfo(mintPubkey);
+    
+    if (mintInfo) {
+      // Basic spl-token check
+      // mint authority is bytes 0-4 (option 1/0) + 4-36 (pubkey)
+      // freeze authority is bytes 46-50 (option 1/0) + 50-82 (pubkey)
+      const data = mintInfo.data;
+      if (data && data.length >= 82) {
+        const mintAuthOption = data.readUInt32LE(0);
+        const freezeAuthOption = data.readUInt32LE(46);
+        
+        if (mintAuthOption !== 0) {
+          return { pass: false, reason: "local: mint authority is not disabled" };
+        }
+        if (freezeAuthOption !== 0) {
+          return { pass: false, reason: "local: freeze authority is not disabled" };
+        }
+      }
+    }
+    
+        // Check LP burn via Meteora API
+    try {
+      if (poolAddress) {
+        const poolRes = await axios.get(`https://dlmm.datapi.meteora.ag/pools/${poolAddress}`, { timeout: 8000 });
+        if (poolRes.data && poolRes.data.liquidity) {
+          // If TVL is too low, it's a risk or already rugged
+          // A more robust check might look at locked liquidity or burn transaction, 
+          // but Meteora API provides `hide` flag for problematic pools
+          if (poolRes.data.hide === true) {
+             return { pass: false, reason: "local: pool is hidden by Meteora (likely scam/rug)" };
+          }
+        }
+      }
+    } catch (apiErr) {
+       console.warn(`  [local] Pool API check error for ${poolAddress}: ${apiErr.message}`);
+       // Continue, don't block on secondary API failure
+    }
+    
+    return { pass: true };
+  } catch (e) {
+    console.warn(`  [local] Authority check error for ${mint}: ${e.message} - rejecting (fail-closed)`);
+    return { pass: false, reason: `local: RPC error (${e.message})` };
+  }
+}
+
 // Stage 4: Rug check via rugcheck.xyz
 export async function rugCheck(mint) {
   if (!mint) return { pass: true, rug_score: null }; // can't check without mint
@@ -98,11 +150,24 @@ export async function rugCheck(mint) {
     const topHolders = data.topHolders || [];
     const top10pct = topHolders.slice(0, 10).reduce((sum, h) => sum + (h.pct || h.percentage || 0), 0);
     if (top10pct > 60) return { pass: false, reason: `rugcheck: top10 holders ${top10pct.toFixed(1)}% > 60%` };
+    // Bundle launch detection: Check if too many wallets hold exactly the same %
+    if (topHolders.length >= 10) {
+      const pcts = topHolders.map(h => h.pct || h.percentage || 0);
+      let identicalCount = 0;
+      for (let i = 0; i < pcts.length; i++) {
+        for (let j = i + 1; j < pcts.length; j++) {
+           if (Math.abs(pcts[i] - pcts[j]) < 0.05 && pcts[i] > 0.5) identicalCount++;
+        }
+      }
+      if (identicalCount > 15) { // Many pairs of identical holdings
+        return { pass: false, reason: `rugcheck: potential bundle launch detected (${identicalCount} identical holding pairs)` };
+      }
+    }
     return { pass: true, rug_score: data.score || 0 };
   } catch (e) {
-    // RugCheck API down or unknown token — warn but don't block
-    console.warn(`  [rugcheck] API error for ${mint}: ${e.message} — passing`);
-    return { pass: true, rug_score: null };
+    // API down = reject in strict mode
+    console.warn(`  [rugcheck] API error for ${mint}: ${e.message} — rejecting (fail-closed)`);
+    return { pass: false, reason: `rugcheck: API unavailable (${e.message})` };
   }
 }
 
@@ -123,6 +188,43 @@ export async function deployerCheck(poolAddress) {
     }
   } catch { /* can't check, pass */ }
   return { pass: true };
+}
+
+
+// Stage 5.5: Social check via DexScreener/Jupiter
+export async function socialCheck(mint) {
+  if (!mint) return { pass: true };
+  try {
+    const res = await axios.get(`https://api.dexscreener.com/latest/dex/tokens/${mint}`, { timeout: 8000 });
+    const pairs = res.data?.pairs || [];
+    if (pairs.length > 0) {
+      const best = pairs[0];
+      const hasTwitter = best.info?.socials?.some(s => s.type === 'twitter');
+      const hasTelegram = best.info?.socials?.some(s => s.type === 'telegram');
+      const hasWebsite = best.info?.websites?.length > 0;
+      
+      if (!hasTwitter && !hasTelegram) {
+        return { pass: false, reason: "social: no Twitter or Telegram found" };
+      }
+    } else {
+       // If not on DexScreener, checking Jupiter directly as fallback
+       const jupRes = await axios.get(`https://tokens.jup.ag/token/${mint}`, { timeout: 5000 }).catch(() => null);
+       if (jupRes && jupRes.data) {
+          const t = jupRes.data;
+          const hasTwitter = !!t.twitter;
+          const hasTelegram = !!t.telegram;
+          if (!hasTwitter && !hasTelegram) {
+             return { pass: false, reason: "social: no Twitter or Telegram found on Jupiter" };
+          }
+       } else {
+          return { pass: false, reason: "social: cannot verify socials (not on DexScreener/Jupiter)" };
+       }
+    }
+    return { pass: true };
+  } catch (e) {
+    console.warn(`  [social] API error for ${mint}: ${e.message} - rejecting`);
+    return { pass: false, reason: `social: API unavailable (${e.message})` };
+  }
 }
 
 // Stage 6: Global fees check — priority + jito tips via Jupiter ChainInsight API
@@ -180,6 +282,10 @@ export async function runPreChecks(address) {
     if (!bl2.pass) { console.log(`  REJECT [blacklist-mint] ${bl2.reason}`); return { pass: false, ...bl2 }; }
   }
 
+  const localAuth = await localAuthorityCheck(pool.base_mint, pool.pool_address);
+  if (!localAuth.pass) { console.log(`  REJECT [localAuth] ${localAuth.reason}`); return { pass: false, ...localAuth, ...pool }; }
+  console.log(`  OK [localAuth]`);
+
   const rug = await rugCheck(pool.base_mint);
   if (!rug.pass) { console.log(`  REJECT [rug] ${rug.reason}`); return { pass: false, ...rug, ...pool }; }
   console.log(`  OK [rug] score=${rug.rug_score ?? "n/a"}`);
@@ -187,6 +293,10 @@ export async function runPreChecks(address) {
   const deployer = await deployerCheck(pool.pool_address);
   if (!deployer.pass) { console.log(`  REJECT [deployer] ${deployer.reason}`); return { pass: false, ...deployer, ...pool }; }
   console.log(`  OK [deployer]`);
+
+  const social = await socialCheck(pool.base_mint);
+  if (!social.pass) { console.log(`  REJECT [social] ${social.reason}`); return { pass: false, ...social, ...pool }; }
+  console.log(`  OK [social]`);
 
   const fees = await feesCheck(pool.base_mint);
   if (!fees.pass) { console.log(`  REJECT [fees] ${fees.reason}`); return { pass: false, ...fees, ...pool }; }

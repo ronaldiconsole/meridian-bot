@@ -1,4 +1,6 @@
 import { discoverPools, getPoolDetail, getTopCandidates } from "./screening.js";
+import { confirmIndicatorPreset } from "./chart-indicators.js";
+
 import {
   getActiveBin,
   deployPosition,
@@ -165,11 +167,34 @@ async function validateDeployPoolThresholds(args) {
   }
 
   const baseMint = detail?.token_x?.address || detail?.base_token_address || null;
+
+  let dynamicDownsidePct = null;
+  if (config.indicators.enabled && baseMint) {
+    try {
+      const indicators = await confirmIndicatorPreset({
+        mint: baseMint,
+        side: "entry",
+        intervals: ["15_MINUTE"],
+      });
+      // confirmIndicatorPreset returns { enabled, confirmed, reason, intervals: [...] }
+      const r15m = indicators.intervals?.find(x => x.interval === "15_MINUTE");
+      const signal = r15m?.signal;
+      if (signal && signal.close > 0 && signal.supertrendValue > 0 && signal.supertrendDirection === "bullish") {
+        const supportPct = ((signal.close - signal.supertrendValue) / signal.close) * 100;
+        dynamicDownsidePct = Math.max(5, supportPct + 10);
+        log("deploy", `Supertrend 15m support found at ${signal.supertrendValue} (Close: ${signal.close}). Dynamic downside_pct set to ${dynamicDownsidePct.toFixed(2)}%`);
+      }
+    } catch (e) {
+      log("deploy_warn", `Failed to compute Supertrend downside_pct: ${e.message}`);
+    }
+  }
+
   const entryMarketData = {
     entry_mcap: numberOrNull(detail?.token_x?.market_cap ?? detail?.base_token_market_cap),
     entry_tvl: tvl,
     entry_volume: numberOrNull(detail?.volume),
     entry_holders: numberOrNull(detail?.base_token_holders ?? detail?.token_x?.holders),
+    ...(dynamicDownsidePct != null ? { downside_pct: dynamicDownsidePct, bins_below: null } : {})
   };
 
   return { pass: true, entryMarketData };

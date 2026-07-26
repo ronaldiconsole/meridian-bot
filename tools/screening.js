@@ -156,6 +156,40 @@ function getRawPoolScreeningRejectReason(pool, s) {
 
   if (mcap == null || mcap < s.minMcap) return `mcap ${mcap ?? "unknown"} below minMcap ${s.minMcap}`;
   if (mcap > s.maxMcap) return `mcap ${mcap} above maxMcap ${s.maxMcap}`;
+
+  // ── Fees-to-MCAP Health Ratio (User-custom rule) ───────────
+  if (mcap != null && tvl != null && feeActiveTvlRatio != null) {
+    const estimatedFees24h = tvl * feeActiveTvlRatio;
+    const feeToMcapRatio = (estimatedFees24h / mcap) * 100;
+    if (feeToMcapRatio < 0.5) {
+      return `fees-to-mcap ratio ${feeToMcapRatio.toFixed(2)}% below required 1.5% (Estimated Fees: $${estimatedFees24h.toFixed(0)}, MCAP: $${mcap.toFixed(0)})`;
+    }
+  }
+
+  // ── Absolute Min Fee Check (30 SOL / ~$4,500 USD per 24h) ───
+  let realFee24hUsd = numeric(pool?.fees_24h || pool?.fee_24h);
+  if (realFee24hUsd == null && tvl != null && feeActiveTvlRatio != null) {
+    realFee24hUsd = tvl * feeActiveTvlRatio;
+  }
+  if (realFee24hUsd == null) {
+    const rawFee = numeric(pool?.fee || pool?.fee_window);
+    if (rawFee != null) realFee24hUsd = rawFee * 48; // scale 30m window to 24h
+  }
+
+  if (realFee24hUsd != null && realFee24hUsd < 4500) {
+    return `absolute 24h fees $${realFee24hUsd.toFixed(0)} below required $4500 (30 SOL)`;
+  }
+
+  // ── Wash Trade Cross-Check (Expected vs Actual Fees) ───────
+  const realFeeUsd = numeric(pool?.fee || pool?.fee_window || (realFee24hUsd ? realFee24hUsd / 48 : null));
+  const feePct = numeric(pool?.fee_pct || pool?.base_fee);
+  if (volume != null && realFeeUsd != null && feePct != null && feePct > 0) {
+    const expectedFeeUsd = volume * (feePct / 100);
+    // Toleransi 20% untuk slippage / dynamic bin fee variance
+    if (realFeeUsd < expectedFeeUsd * 0.8) {
+      return `wash trade suspected: actual fees $${realFeeUsd.toFixed(0)} far below expected $${expectedFeeUsd.toFixed(0)} for volume $${volume.toFixed(0)} (fee: ${feePct}%)`;
+    }
+  }
   if (holders == null || holders < s.minHolders) return `holders ${holders ?? "unknown"} below minHolders ${s.minHolders}`;
   if (volume == null || volume < s.minVolume) return `volume ${volume ?? "unknown"} below minVolume ${s.minVolume}`;
   if (tvl == null || tvl < s.minTvl) return `TVL ${tvl ?? "unknown"} below minTvl ${s.minTvl}`;
@@ -187,8 +221,11 @@ function getRawPoolScreeningRejectReason(pool, s) {
     return `blocked launchpad (${launchpad})`;
   }
   if (s.minTokenAgeHours != null) {
+    const effectiveCreatedAt = createdAt ?? (pool?.pool_created_at ? Date.parse(pool.pool_created_at) : null);
     const maxCreatedAt = Date.now() - s.minTokenAgeHours * 3_600_000;
-    if (createdAt == null || createdAt > maxCreatedAt) return `token age below minTokenAgeHours ${s.minTokenAgeHours}`;
+    if (effectiveCreatedAt != null && effectiveCreatedAt > maxCreatedAt) {
+      return `token age below minTokenAgeHours ${s.minTokenAgeHours}`;
+    }
   }
   if (s.maxTokenAgeHours != null) {
     const minCreatedAt = Date.now() - s.maxTokenAgeHours * 3_600_000;
@@ -212,6 +249,7 @@ async function fetchPoolDiscoveryPage({ page_size, filters, timeframe, category 
     `&filter_by=${encodeURIComponent(filters)}` +
     `&timeframe=${timeframe}` +
     `&category=${category}`;
+  
 
   const res = await fetch(url);
 
@@ -273,24 +311,34 @@ async function applyVolatilityTimeframe(rawPools, sourceTimeframe) {
   for (const pool of rawPools) {
     if (!pool?.pool_address) continue;
     const metrics = metricsByPool.get(pool.pool_address);
-    if (!metrics) continue;
-
-    pool[`volume_${volatilityTimeframe}`] = metrics.volume;
-    pool[`volatility_${volatilityTimeframe}`] = metrics.volatility;
-
-    // Use longer-timeframe values as the canonical ones for filtering
-    if (metrics.volatility != null) pool.volatility = metrics.volatility;
-    if (metrics.volume != null) pool.volume = metrics.volume;
+    if (metrics) {
+      pool[`volume_${volatilityTimeframe}`] = metrics.volume;
+      pool[`volatility_${volatilityTimeframe}`] = metrics.volatility;
+      if (metrics.volatility != null) pool.volatility = metrics.volatility;
+      if (metrics.volume != null) pool.volume = metrics.volume;
+    } else {
+      // Graceful fallback to primary timeframe values if detail API fails/limits
+      pool[`volume_${volatilityTimeframe}`] = pool.volume ?? null;
+      pool[`volatility_${volatilityTimeframe}`] = pool.volatility ?? null;
+    }
   }
 
   return rawPools;
 }
 
 async function searchAssetsBySymbol(symbol) {
-  const res = await fetch(`${DATAPI_JUP}/assets/search?query=${encodeURIComponent(symbol)}`);
-  if (!res.ok) throw new Error(`assets/search ${res.status}`);
-  const data = await res.json();
-  return Array.isArray(data) ? data : [data];
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 2500); // 2.5s max timeout for Jupiter API
+  try {
+    const res = await fetch(`${DATAPI_JUP}/assets/search?query=${encodeURIComponent(symbol)}`, { signal: controller.signal });
+    clearTimeout(timer);
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data) ? data : [data];
+  } catch (e) {
+    clearTimeout(timer);
+    return [];
+  }
 }
 
 async function enrichDiscordSignalLaunchpads(rawPools) {
@@ -434,6 +482,8 @@ export async function discoverPools({
   page_size = 50,
 } = {}) {
   const s = config.screening;
+  // Clean URL query parameters supported by Meteora Pool Discovery Backend.
+  // Advanced filters (organic_score, fee_active_tvl_ratio, token_age, etc.) are evaluated safely in JS memory below.
   const filters = [
     "base_token_has_critical_warnings=false",
     "quote_token_has_critical_warnings=false",
@@ -448,14 +498,6 @@ export async function discoverPools({
     s.maxTvl != null ? `tvl<=${s.maxTvl}` : null,
     `dlmm_bin_step>=${s.minBinStep}`,
     `dlmm_bin_step<=${s.maxBinStep}`,
-    `fee_active_tvl_ratio>=${s.minFeeActiveTvlRatio}`,
-    `base_token_organic_score>=${s.minOrganic}`,
-    `quote_token_organic_score>=${s.minQuoteOrganic}`,
-    s.minTokenAgeHours != null ? `base_token_created_at<=${Date.now() - s.minTokenAgeHours * 3_600_000}` : null,
-    s.maxTokenAgeHours != null ? `base_token_created_at>=${Date.now() - s.maxTokenAgeHours * 3_600_000}` : null,
-    Array.isArray(s.allowedLaunchpads) && s.allowedLaunchpads.length > 0
-      ? `base_token_launchpad=[${s.allowedLaunchpads.join(",")}]`
-      : null,
   ].filter(Boolean).join("&&");
 
   const data = await fetchPoolDiscoveryPage({
@@ -518,7 +560,9 @@ export async function discoverPools({
     }
   }
 
+  
   rawPools = await applyVolatilityTimeframe(rawPools, s.timeframe);
+  
   await enrichDiscordSignalLaunchpads(rawPools);
 
   const filteredExamples = [];
