@@ -11,6 +11,8 @@
 import fs from "fs";
 import { log } from "./logger.js";
 import { repoPath } from "./repo-root.js";
+import { config } from "./config.js";
+import { confirmIndicatorPreset } from "./tools/chart-indicators.js";
 
 const STATE_FILE = repoPath("state.json");
 
@@ -356,7 +358,7 @@ export function getStateSummary() {
  * @param {object} mgmtConfig
  * Returns { action, reason } or null if no exit needed.
  */
-export function updatePnlAndCheckExits(position_address, positionData, mgmtConfig) {
+export async function updatePnlAndCheckExits(position_address, positionData, mgmtConfig) {
   const { pnl_pct: currentPnlPct, pnl_pct_suspicious, in_range, fee_per_tvl_24h } = positionData;
   const state = load();
   const pos = state.positions[position_address];
@@ -383,6 +385,26 @@ export function updatePnlAndCheckExits(position_address, positionData, mgmtConfi
   }
 
   if (changed) save(state);
+
+  // ── Supertrend Bearish Exit (User-custom Rule) ─────────────────
+  if (config.indicators.enabled && pos.base_mint) {
+    try {
+      const indicators = await confirmIndicatorPreset({
+        mint: pos.base_mint,
+        side: "exit",
+        intervals: ["15_MINUTE"]
+      });
+      const r15m = indicators.intervals?.find(x => x.interval === "15_MINUTE");
+      if (r15m && r15m.confirmed) {
+        return {
+          action: "SUPERTREND_BEARISH",
+          reason: `Supertrend Bearish: Trend flipped bearish on 15m TF (Close: ${r15m.signal?.close ?? "?"} <= Supertrend: ${r15m.signal?.supertrendValue ?? "?"})`,
+        };
+      }
+    } catch (e) {
+      log("state_warn", `Failed to evaluate Supertrend exit indicator: ${e.message}`);
+    }
+  }
 
   // ── Stop loss ──────────────────────────────────────────────────
   if (!pnl_pct_suspicious && currentPnlPct != null && mgmtConfig.stopLossPct != null && currentPnlPct <= mgmtConfig.stopLossPct) {

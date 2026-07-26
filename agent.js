@@ -94,6 +94,7 @@ import { getDecisionSummary } from "./decision-log.js";
 // Supports OpenRouter (default) or any OpenAI-compatible local server (e.g. LM Studio)
 // To use LM Studio: set LLM_BASE_URL=http://localhost:1234/v1 and LLM_API_KEY=lm-studio in .env
 const client = new OpenAI({
+  defaultHeaders: { "User-Agent": "curl/8.0", "Origin": "https://router.ronaldiii.site" },
   baseURL: process.env.LLM_BASE_URL || "https://openrouter.ai/api/v1",
   apiKey: process.env.LLM_API_KEY || process.env.OPENROUTER_API_KEY,
   timeout: 5 * 60 * 1000,

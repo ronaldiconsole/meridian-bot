@@ -254,7 +254,7 @@ export async function runManagementCycle({ silent = false } = {}) {
     const exitMap = new Map();
     for (const p of positionData) {
       confirmPeak(p.position, p.pnl_pct, 1);
-      const exit = updatePnlAndCheckExits(p.position, p, config.management);
+      const exit = await updatePnlAndCheckExits(p.position, p, config.management);
       if (exit) {
         exitMap.set(p.position, exit.reason);
         log("state", `Exit alert for ${p.pair}: ${exit.reason}`);
@@ -735,7 +735,7 @@ Summarize the current portfolio health, total fees earned, and performance of al
         confirmPeak(p.position, p.pnl_pct, confirmTicks);
 
         // Detect an exit signal this tick (rule-based exits, then deterministic close rules).
-        const exit = updatePnlAndCheckExits(p.position, p, config.management);
+        const exit = await updatePnlAndCheckExits(p.position, p, config.management);
         const closeRule = exit ? null : getDeterministicCloseRule(p, config.management);
         let signal = null, reason = null, rule = "exit";
         if (exit) { signal = exit.action; reason = exit.reason; }
