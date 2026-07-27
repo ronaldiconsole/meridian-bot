@@ -924,13 +924,18 @@ function getDeterministicCloseRule(position, managementConfig) {
   ) {
     return { action: "CLOSE", rule: 3, reason: "pumped far above range" };
   }
+  const posAgeMinutes = position.age_minutes ?? 0;
+  const freshCutoffMinutes = (managementConfig.freshTokenAgeHoursThreshold ?? 5) * 60;
+  const effectiveOorLimit = (posAgeMinutes > 0 && posAgeMinutes < freshCutoffMinutes)
+    ? (managementConfig.freshTokenOorWaitMinutes ?? 10)
+    : managementConfig.outOfRangeWaitMinutes;
   if (
     position.active_bin != null &&
     position.upper_bin != null &&
     position.active_bin > position.upper_bin &&
-    (position.minutes_out_of_range ?? 0) >= managementConfig.outOfRangeWaitMinutes
+    (position.minutes_out_of_range ?? 0) >= effectiveOorLimit
   ) {
-    return { action: "CLOSE", rule: 4, reason: "OOR" };
+    return { action: "CLOSE", rule: 4, reason: `OOR (${position.minutes_out_of_range ?? 0}m >= ${effectiveOorLimit}m limit)` };
   }
   if (
     position.fee_per_tvl_24h != null &&
@@ -1343,7 +1348,8 @@ async function deployLatestCandidate(index) {
     }
   }
   const deployAmount = computeDeployAmount((await getWalletBalances()).sol);
-  const binsBelow = computeBinsBelow(candidate.volatility);
+  const candidateAgeHours = candidate.base?.created_at ? (Date.now() - candidate.base.created_at) / 3_600_000 : null;
+  const binsBelow = computeBinsBelow(candidate.volatility, candidateAgeHours);
   const result = await executeTool("deploy_position", {
     pool_address: candidate.pool,
     amount_y: deployAmount,
@@ -1712,13 +1718,17 @@ function getLoneCandidateSkipReason({ pool, sw, n, ti } = {}) {
   return null;
 }
 
-function computeBinsBelow(volatility) {
+function computeBinsBelow(volatility, ageHours = null) {
   const parsedVolatility = Number(volatility);
   if (!Number.isFinite(parsedVolatility) || parsedVolatility <= 0) {
     throw new Error(`Invalid volatility ${volatility ?? "unknown"} — refusing volatility-scaled deploy.`);
   }
-  const lo = config.strategy.minBinsBelow;
-  const hi = config.strategy.maxBinsBelow;
+  let lo = config.strategy.minBinsBelow;
+  let hi = config.strategy.maxBinsBelow;
+  if (ageHours != null && ageHours < (config.screening.freshTokenAgeHoursThreshold ?? 5)) {
+    lo = Math.min(15, lo);
+    hi = Math.min(35, hi);
+  }
   return Math.max(lo, Math.min(hi, Math.round(lo + (parsedVolatility / 5) * (hi - lo))));
 }
 

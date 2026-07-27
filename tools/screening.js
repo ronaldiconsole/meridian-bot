@@ -220,8 +220,19 @@ function getRawPoolScreeningRejectReason(pool, s) {
   if (includesCaseInsensitive(s.blockedLaunchpads, launchpad)) {
     return `blocked launchpad (${launchpad})`;
   }
+  const effectiveCreatedAt = createdAt ?? (pool?.pool_created_at ? Date.parse(pool.pool_created_at) : null);
+  const tokenAgeHours = effectiveCreatedAt != null ? (Date.now() - effectiveCreatedAt) / 3_600_000 : null;
+
+  // ── Fresh Launch Low Base-Fee Filter (Scam Pool Mitigation) ──
+  const minFreshBaseFee = s.minFreshTokenBaseFee ?? 0.03; // Default 3% min base fee for fresh launches (< 5h)
+  const freshAgeCutoffHours = s.freshTokenAgeHoursThreshold ?? 5;
+  if (tokenAgeHours != null && tokenAgeHours < freshAgeCutoffHours) {
+    if (feePct != null && feePct < minFreshBaseFee * 100) {
+      return `fresh token age (${tokenAgeHours.toFixed(1)}h < ${freshAgeCutoffHours}h) has low base fee ${feePct}% (min required: ${(minFreshBaseFee * 100).toFixed(1)}%)`;
+    }
+  }
+
   if (s.minTokenAgeHours != null) {
-    const effectiveCreatedAt = createdAt ?? (pool?.pool_created_at ? Date.parse(pool.pool_created_at) : null);
     const maxCreatedAt = Date.now() - s.minTokenAgeHours * 3_600_000;
     if (effectiveCreatedAt != null && effectiveCreatedAt > maxCreatedAt) {
       return `token age below minTokenAgeHours ${s.minTokenAgeHours}`;

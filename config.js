@@ -98,6 +98,8 @@ export const config = {
     blockedLaunchpads:  u.blockedLaunchpads  ?? [],  // e.g. ["letsbonk.fun", "pump.fun"]
     minTokenAgeHours:   u.minTokenAgeHours   ?? null, // null = no minimum
     maxTokenAgeHours:   u.maxTokenAgeHours   ?? null, // null = no maximum
+    minFreshTokenBaseFee: u.minFreshTokenBaseFee ?? 0.03,
+    freshTokenAgeHoursThreshold: u.freshTokenAgeHoursThreshold ?? 5
   },
 
   // ─── Position Management ────────────────
@@ -108,6 +110,7 @@ export const config = {
     autoSwapRetryDelayMs:  u.autoSwapRetryDelayMs  ?? 3000, // delay between auto-swap retries
     outOfRangeBinsToClose: u.outOfRangeBinsToClose ?? 10,
     outOfRangeWaitMinutes: u.outOfRangeWaitMinutes ?? 30,
+    freshTokenOorWaitMinutes: u.freshTokenOorWaitMinutes ?? 10,
     oorCooldownTriggerCount: u.oorCooldownTriggerCount ?? 3,
     oorCooldownHours:       u.oorCooldownHours       ?? 12,
     repeatDeployCooldownEnabled: u.repeatDeployCooldownEnabled ?? true,
