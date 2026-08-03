@@ -22,7 +22,6 @@ import {
   getTrackedPosition,
   minutesOutOfRange,
   syncOpenPositions,
-  getOpenPoolKeys,
 } from "../state.js";
 import { recordPerformance } from "../lessons.js";
 import { isBaseMintOnCooldown, isPoolOnCooldown } from "../pool-memory.js";
@@ -578,33 +577,8 @@ export async function deployPosition({
   }
 
   if (process.env.DRY_RUN === "true") {
-    const virtualPositionId = `${pool_address}_${new Date().toISOString()}`;
-    try {
-      trackPosition({
-        position: virtualPositionId,
-        pool: pool_address,
-        pool_name,
-        strategy: activeStrategy,
-        bin_range: { lower_bin: null, upper_bin: null },
-        amount_sol: finalAmountY,
-        amount_x: finalAmountX,
-        active_bin: activeBin.binId,
-        bin_step: actualBinStep,
-        volatility: normalizedVolatility,
-        fee_tvl_ratio,
-        organic_score,
-        initial_value_usd,
-        entry_mcap,
-        entry_tvl,
-        entry_volume,
-        entry_holders,
-      });
-    } catch (err) {
-      log("deploy", `DRY RUN — trackPosition failed (non-fatal): ${err.message}`);
-    }
     return {
       dry_run: true,
-      position: virtualPositionId,
       would_deploy: {
         pool_address,
         strategy: activeStrategy,

@@ -14,7 +14,7 @@ import {
 import { getWalletBalances, swapToken } from "./wallet.js";
 import { studyTopLPers } from "./study.js";
 import { addLesson, clearAllLessons, clearPerformance, removeLessonsByKeyword, getPerformanceHistory, pinLesson, unpinLesson, listLessons } from "../lessons.js";
-import { setPositionInstruction, getOpenPoolKeys } from "../state.js";
+import { setPositionInstruction } from "../state.js";
 
 import { getPoolMemory, addPoolNote } from "../pool-memory.js";
 import { addStrategy, listStrategies, getStrategy, setActiveStrategy, removeStrategy } from "../strategy-library.js";
@@ -840,17 +840,6 @@ async function runSafetyChecks(name, args) {
         return {
           pass: false,
           reason: `Already have an open position in pool ${args.pool_address}. Cannot open duplicate.`,
-        };
-      }
-
-      // One position per PAIR — check on-chain + local state (dry-run virtual positions).
-      // Prevents stacking multiple positions on the same pair, which concentrates risk:
-      // if the token dumps, every stacked position bleeds together (Chiikawa -91% x4).
-      const openPoolKeys = getOpenPoolKeys();
-      if (openPoolKeys.has(args.pool_address)) {
-        return {
-          pass: false,
-          reason: `Pair already has an open position (dry-run tracked in state). Cannot open a second position on the same pair.`,
         };
       }
 
