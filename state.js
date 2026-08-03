@@ -35,7 +35,18 @@ function load() {
     return { positions: {}, recentEvents: [], lastUpdated: null };
   }
   try {
-    return JSON.parse(fs.readFileSync(STATE_FILE, "utf8"));
+    const parsed = JSON.parse(fs.readFileSync(STATE_FILE, "utf8"));
+    // Normalize legacy array format (from old reset) → object keyed by position address.
+    // Writing string keys to an array silently drops them in JSON.stringify, which
+    // made dry-run virtual positions disappear. Migrate once on load.
+    if (Array.isArray(parsed.positions)) {
+      const obj = {};
+      for (const p of parsed.positions) {
+        if (p && typeof p === "object" && p.position) obj[p.position] = p;
+      }
+      parsed.positions = obj;
+    }
+    return parsed;
   } catch (err) {
     log("state_error", `Failed to read state.json: ${err.message}`);
     return { positions: {}, lastUpdated: null };
@@ -98,6 +109,7 @@ export function trackPosition({
     entry_holders,
     signal_snapshot: signal_snapshot || null,
     deployed_at: new Date().toISOString(),
+    dry_run: process.env.DRY_RUN === "true",
     out_of_range_since: null,
     last_claim_at: null,
     total_fees_claimed_usd: 0,
@@ -309,6 +321,19 @@ export function getTrackedPositions(openOnly = false) {
   const state = load();
   const all = Object.values(state.positions);
   return openOnly ? all.filter((p) => !p.closed) : all;
+}
+
+/**
+ * Get the set of pool addresses currently held open (from state.json).
+ * Includes dry-run virtual positions (recorded locally, never on-chain).
+ */
+export function getOpenPoolKeys() {
+  const state = load();
+  return new Set(
+    Object.values(state.positions)
+      .filter((p) => !p.closed && p.pool)
+      .map((p) => p.pool)
+  );
 }
 
 /**
