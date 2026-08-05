@@ -149,6 +149,10 @@ function getRawPoolScreeningRejectReason(pool, s) {
   if (s.excludeHighSupplyConcentration && pool?.base_token_has_high_supply_concentration === true) {
     return "base token has high supply concentration";
   }
+  if (s.requireCleanAuthority) {
+    if (base?.audit?.mint_disabled === false) return "base token mint authority active (rug risk)";
+    if (base?.audit?.freeze_disabled === false) return "base token freeze authority active (rug risk)";
+  }
   if (pool?.base_token_has_critical_warnings === true) return "base token has critical warnings";
   if (pool?.quote_token_has_critical_warnings === true) return "quote token has critical warnings";
   if (pool?.base_token_has_high_single_ownership === true) return "base token has high single ownership";

@@ -4,6 +4,7 @@ import {
   LAMPORTS_PER_SOL,
   VersionedTransaction,
   Keypair,
+  ComputeBudgetProgram,
 } from "@solana/web3.js";
 import bs58 from "bs58";
 import { log } from "../logger.js";
@@ -177,6 +178,7 @@ export async function swapToken({
       outputMint: output_mint,
       amount: amountStr,
       taker: wallet.publicKey.toString(),
+      prioritizationFeeLamports: "auto",
     });
     const referralParams = getJupiterReferralParams();
     if (referralParams) {
