@@ -183,6 +183,31 @@ On startup, logs show `Repo: ... | cwd: ... | PM2 id: ...`. **Repo and cwd must 
 
 Avoid `nohup node index.js` — it runs outside PM2 and can leave a duplicate Telegram poller fighting the managed process.
 
+### Local PnL dashboard (read-only)
+
+Meridian also includes a separate local control-room view for checking positions, PnL, the bot's decision flow, and audit logs. It never exposes transaction buttons or write endpoints.
+
+```bash
+npm run dashboard
+```
+
+Open [http://127.0.0.1:8787](http://127.0.0.1:8787) in a browser. The four menus are:
+
+- **Overview** — portfolio value, open/realized PnL, fees, out-of-range count, runtime status, and recent events.
+- **Positions / PnL** — each open position's value, PnL, fees, active range, and out-of-range age.
+- **Bot Flow** — scheduler → data → management → decision → safety → action → verification → state → notification, with the current stage inferred from logs.
+- **Logs** — bounded runtime logs, action audit JSONL, and structured decisions with source, level, and text filters.
+
+Defaults can be changed in `.env`:
+
+```env
+DASHBOARD_HOST=127.0.0.1
+DASHBOARD_PORT=8787
+DASHBOARD_REFRESH_MS=5000
+```
+
+The dashboard first tries the existing read-only live position reader. If wallet settings or runtime dependencies are unavailable, it shows the locally tracked state and labels the source as a fallback. Secrets and private-key fields are redacted before data reaches the browser.
+
 ---
 
 ## Running modes

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Meridian local read-only PnL and operations dashboard">
+    <title>Meridian Control Room</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Dashboard navigation">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">M</div>
+          <div>
+            <p class="eyebrow">LOCAL CONSOLE</p>
+            <h1>Meridian</h1>
+          </div>
+        </div>
+        <nav class="nav-list" aria-label="Views">
+          <button class="nav-item is-active" data-view-target="overview" type="button"><span class="nav-glyph" aria-hidden="true">◈</span><span>Overview</span></button>
+          <button class="nav-item" data-view-target="positions" type="button"><span class="nav-glyph" aria-hidden="true">▥</span><span>Positions / PnL</span></button>
+          <button class="nav-item" data-view-target="flow" type="button"><span class="nav-glyph" aria-hidden="true">→</span><span>Bot Flow</span></button>
+          <button class="nav-item" data-view-target="logs" type="button"><span class="nav-glyph" aria-hidden="true">≡</span><span>Logs</span></button>
+        </nav>
+        <div class="sidebar-note">
+          <span class="status-dot status-dot--info" aria-hidden="true"></span>
+          <div>
+            <strong>Read-only view</strong>
+            <p>No transaction controls are exposed here.</p>
+          </div>
+        </div>
+        <p class="sidebar-footer">MERIDIAN CONTROL ROOM · v1</p>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">OPERATIONS / LOCALHOST</p>
+            <h2 id="page-title">Overview</h2>
+          </div>
+          <div class="topbar-actions">
+            <span class="connection-status" id="connection-status" data-state="loading"><span class="status-dot" aria-hidden="true"></span><span id="connection-label">Connecting…</span></span>
+            <span class="last-refresh" id="last-refresh">Not refreshed yet</span>
+            <button class="button button--primary" id="refresh-button" type="button"><span aria-hidden="true">↻</span> Refresh</button>
+          </div>
+        </header>
+
+        <div class="live-region" id="live-region" aria-live="polite" aria-atomic="true"></div>
+        <div class="error-banner" id="error-banner" role="alert" hidden></div>
+
+        <section class="view is-visible" data-view="overview" aria-labelledby="page-title">
+          <div class="view-heading">
+            <div>
+              <p class="eyebrow">PORTFOLIO SNAPSHOT</p>
+              <h3>What is the bot seeing now?</h3>
+            </div>
+            <span class="data-badge" id="overview-data-status">Waiting for data</span>
+          </div>
+
+          <div class="kpi-grid" aria-label="Portfolio summary">
+            <article class="kpi-card kpi-card--accent"><span class="kpi-label">Open positions</span><strong class="kpi-value" data-kpi="open_positions">—</strong><span class="kpi-meta" data-kpi-meta="open_positions">Live tracked</span></article>
+            <article class="kpi-card"><span class="kpi-label">Portfolio value</span><strong class="kpi-value" data-kpi="portfolio_value_usd">—</strong><span class="kpi-meta">Current visible value</span></article>
+            <article class="kpi-card"><span class="kpi-label">Open PnL</span><strong class="kpi-value" data-kpi="open_pnl_usd">—</strong><span class="kpi-meta">Unrealized across positions</span></article>
+            <article class="kpi-card"><span class="kpi-label">Realized PnL</span><strong class="kpi-value" data-kpi="realized_pnl_usd">—</strong><span class="kpi-meta">Recorded performance</span></article>
+            <article class="kpi-card"><span class="kpi-label">Fees earned</span><strong class="kpi-value" data-kpi="fees_earned_usd">—</strong><span class="kpi-meta">Claimed + unclaimed</span></article>
+            <article class="kpi-card kpi-card--warning"><span class="kpi-label">Out of range</span><strong class="kpi-value" data-kpi="out_of_range">—</strong><span class="kpi-meta">Needs attention</span></article>
+          </div>
+
+          <div class="content-grid content-grid--wide">
+            <article class="panel chart-panel">
+              <div class="panel-heading"><div><p class="eyebrow">PERFORMANCE</p><h4>PnL history</h4></div><span class="panel-caption">From lessons.json</span></div>
+              <div class="chart-wrap"><svg id="pnl-sparkline" class="sparkline" viewBox="0 0 720 220" role="img" aria-label="PnL history chart"></svg><p class="chart-empty" id="chart-empty">No performance points yet. The chart appears after the bot records a closed position.</p></div>
+            </article>
+            <article class="panel runtime-panel">
+              <div class="panel-heading"><div><p class="eyebrow">RUNTIME</p><h4>Agent status</h4></div><span class="panel-caption" id="runtime-node">Node —</span></div>
+              <div class="runtime-status"><span class="status-dot" id="runtime-dot" aria-hidden="true"></span><strong id="runtime-activity">Waiting</strong></div>
+              <dl class="runtime-list"><div><dt>Data source</dt><dd id="runtime-source">—</dd></div><div><dt>Process</dt><dd id="runtime-pid">—</dd></div><div><dt>Mode</dt><dd id="runtime-mode">—</dd></div><div><dt>State updated</dt><dd id="runtime-updated">—</dd></div></dl>
+            </article>
+          </div>
+
+          <div class="content-grid content-grid--wide">
+            <article class="panel"><div class="panel-heading"><div><p class="eyebrow">RECENT ACTIVITY</p><h4>Events</h4></div><button class="text-button" data-go-view="logs" type="button">Open logs →</button></div><ul class="event-list" id="recent-events"><li class="empty-row">No events recorded yet.</li></ul></article>
+            <article class="panel"><div class="panel-heading"><div><p class="eyebrow">WHY THE BOT WAITED</p><h4>Recent decisions</h4></div><button class="text-button" data-go-view="flow" type="button">See flow →</button></div><ul class="event-list" id="recent-decisions"><li class="empty-row">No structured decisions yet.</li></ul></article>
+          </div>
+        </section>
+
+        <section class="view" data-view="positions" aria-labelledby="page-title" hidden>
+          <div class="view-heading"><div><p class="eyebrow">LIVE / FALLBACK TELEMETRY</p><h3>Positions &amp; PnL</h3><p class="view-subtitle">Detailed visibility into each tracked position. This screen cannot close, claim, or rebalance anything.</p></div><span class="data-badge" id="positions-data-status">Waiting for data</span></div>
+          <article class="panel table-panel"><div class="panel-heading"><div><p class="eyebrow">OPEN POSITIONS</p><h4>Current exposure</h4></div><span class="panel-caption" id="positions-count">0 positions</span></div><div class="table-scroll"><table><thead><tr><th scope="col">Pool / position</th><th scope="col">Value</th><th scope="col">PnL</th><th scope="col">Fees</th><th scope="col">Range</th><th scope="col">OOR age</th><th scope="col">Strategy</th></tr></thead><tbody id="positions-table"><tr><td colspan="7" class="empty-row">Loading position data…</td></tr></tbody></table></div></article>
+          <div class="notice-card" id="positions-notice"><span class="notice-icon" aria-hidden="true">i</span><div><strong>Live data is optional</strong><p>If wallet settings or runtime dependencies are unavailable, this view uses the last locally tracked state and labels it clearly.</p></div></div>
+        </section>
+
+        <section class="view" data-view="flow" aria-labelledby="page-title" hidden>
+          <div class="view-heading"><div><p class="eyebrow">HOW MERIDIAN OPERATES</p><h3>Bot Flow</h3><p class="view-subtitle">A separate map of the read → decide → gate → act → verify cycle, inferred from the latest activity.</p></div><span class="data-badge" id="flow-stage-badge">Waiting for activity</span></div>
+          <div class="flow-layout"><article class="panel flow-panel"><div class="panel-heading"><div><p class="eyebrow">PROCESS SEQUENCE</p><h4 id="flow-active-label">Waiting for activity</h4></div><span class="panel-caption">Latest stage</span></div><ol class="flow-list" id="flow-list"><li class="empty-row">Loading flow…</li></ol></article><aside class="panel flow-detail"><p class="eyebrow">CURRENT SIGNAL</p><h4 id="flow-detail-title">No signal yet</h4><p id="flow-detail-copy">The dashboard will explain the current stage when a runtime, action, or decision event is available.</p><div class="flow-callout"><span class="status-dot status-dot--info" aria-hidden="true"></span><span>Flow is explanatory only. It never invokes an executor tool.</span></div></aside></div>
+        </section>
+
+        <section class="view" data-view="logs" aria-labelledby="page-title" hidden>
+          <div class="view-heading"><div><p class="eyebrow">AUDIT TRAIL</p><h3>Logs</h3><p class="view-subtitle">Runtime messages, action audit records, and structured decisions in one bounded feed.</p></div><span class="data-badge" id="logs-count">0 entries</span></div>
+          <article class="panel logs-panel"><div class="log-toolbar"><label>Source<select id="log-source"><option value="all">All sources</option><option value="runtime">Runtime</option><option value="actions">Actions</option><option value="decisions">Decisions</option></select></label><label>Level<select id="log-level"><option value="all">All levels</option><option value="info">Info</option><option value="warn">Warn</option><option value="error">Error</option><option value="success">Success</option><option value="failure">Failure</option></select></label><label class="search-field">Search<input id="log-search" type="search" placeholder="pool, action, safety…" maxlength="100"></label><button class="button button--secondary" id="logs-refresh" type="button">Apply filters</button></div><div class="table-scroll"><table class="logs-table"><thead><tr><th scope="col">Time</th><th scope="col">Source</th><th scope="col">Status</th><th scope="col">Event</th><th scope="col">Details</th></tr></thead><tbody id="logs-table"><tr><td colspan="5" class="empty-row">Loading logs…</td></tr></tbody></table></div></article>
+          <div class="notice-card notice-card--muted"><span class="notice-icon" aria-hidden="true">↳</span><div><strong>Safe by default</strong><p>Secrets, private keys, and arbitrary file paths are redacted or rejected before they reach this browser.</p></div></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
