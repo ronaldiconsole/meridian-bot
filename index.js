@@ -176,7 +176,18 @@ async function executeManagementActions(actionPositions, actionMap, { liveMessag
       await liveMessage?.toolStart("close_position");
       const res = await executeTool("close_position", { position_address: p.position, reason }).catch(e => ({ error: e.message }));
       const ok = res?.success !== false && !res?.error && !res?.blocked;
+      
       await liveMessage?.toolFinish("close_position", res, ok);
+      if (ok && config.management.autoSwapAfterClaim !== false) {
+        try {
+          const b = await getWalletBalances().catch(() => null);
+          const nonSol = (b?.tokens || []).filter(t => t.mint !== "So11111111111111111111111111111111111111112" && t.balance > 0);
+          for (const tok of nonSol) {
+            log("cron", "Auto-swapping token to SOL after close: " + tok.symbol);
+            await executeTool("swap_token", { input_mint: tok.mint, output_mint: "SOL", amount: tok.balance }).catch(e => log("cron_error", "Auto-swap failed: " + e.message));
+          }
+        } catch(e) { log("cron_error", "Auto-swap check error: " + e.message); }
+      }
       lines.push(`${p.pair}: ${ok ? `closed (${reason})` : `close FAILED — ${res?.error || res?.reason || "unknown"}`}`);
     } else if (act.action === "CLAIM") {
       await liveMessage?.toolStart("claim_fees");
@@ -724,7 +735,47 @@ Summarize the current portfolio health, total fees earned, and performance of al
   const pnlPollMs = Math.max(1, Number(config.pnl.pollIntervalSec ?? 3)) * 1000;
   const confirmTicks = Math.max(1, Number(config.pnl.confirmTicks ?? 2));
   let _pnlPollBusy = false;
-  const pnlPollInterval = setInterval(async () => {
+    // Dedicated Rug Watcher (10s poller) — checks mint/freeze authority on open positions
+  const rugWatchMs = 10000;
+  let _rugWatchBusy = false;
+  const rugWatchInterval = setInterval(async () => {
+    if (_rugWatchBusy) return;
+    const tracked = getTrackedPositions(true);
+    if (!tracked || tracked.length === 0) return;
+    _rugWatchBusy = true;
+    try {
+      for (const pos of tracked) {
+        if (!pos.base_mint) continue;
+        try {
+          const res = await fetch("https://datapi.jup.ag/v1/assets/search?query=" + pos.base_mint).catch(() => null);
+          if (!res || !res.ok) continue;
+          const data = await res.json();
+          const info = Array.isArray(data) ? data[0] : data;
+          if (!info) continue;
+          const audit = info.audit || {};
+          if (audit.mintAuthorityDisabled === false || audit.freezeAuthorityDisabled === false) {
+            const reason = "CRITICAL: Rugpull risk! Authority reactivated on " + (pos.pool_name || pos.base_mint);
+            log("rug_watcher", reason);
+            const { addToBlacklist } = await import("./token-blacklist.js");
+            addToBlacklist(pos.base_mint, reason);
+            _managementBusy = true;
+            try {
+              const actMap = new Map([[pos.position, { action: "CLOSE", rule: "rug_watcher", reason }]]);
+              await executeManagementActions([pos], actMap, {});
+            } finally {
+              _managementBusy = false;
+            }
+          }
+        } catch (e) {
+          log("cron_error", "Rug watcher error: " + e.message);
+        }
+      }
+    } finally {
+      _rugWatchBusy = false;
+    }
+  }, rugWatchMs);
+
+const pnlPollInterval = setInterval(async () => {
     if (_managementBusy || _screeningBusy || _pnlPollBusy) return;
     if (getTrackedPositions(true).length === 0) return;
     _pnlPollBusy = true;
